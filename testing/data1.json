@@ -1,0 +1,83 @@
+{
+  "locations" : [ {
+    "timestampMs" : "1517218739237",
+    "latitudeE7" : 265620925,
+    "longitudeE7" : -801004559,
+    "accuracy" : 600
+  }, {
+    "timestampMs" : "1517218624576",
+    "latitudeE7" : 265620925,
+    "longitudeE7" : -801004559,
+    "accuracy" : 600
+  }, {
+    "timestampMs" : "1517218591314",
+    "latitudeE7" : 265692905,
+    "longitudeE7" : -800990596,
+    "accuracy" : 1500
+  }, {
+    "timestampMs" : "1517218469293",
+    "latitudeE7" : 265625602,
+    "longitudeE7" : -801018779,
+    "accuracy" : 8,
+    "velocity" : 0,
+    "altitude" : -10,
+    "verticalAccuracy" : 16
+  }, {
+    "timestampMs" : "1517218439062",
+    "latitudeE7" : 265620925,
+    "longitudeE7" : -801004559,
+    "accuracy" : 600
+  }, {
+    "timestampMs" : "1517218384598",
+    "latitudeE7" : 265620925,
+    "longitudeE7" : -801004559,
+    "accuracy" : 600
+  }, {
+    "timestampMs" : "1517218204331",
+    "latitudeE7" : 265625020,
+    "longitudeE7" : -801020095,
+    "accuracy" : 16,
+    "velocity" : 0,
+    "heading" : 216,
+    "altitude" : 21,
+    "verticalAccuracy" : 32
+  }, {
+    "timestampMs" : "1376344387457",
+    "latitudeE7" : 265515950,
+    "longitudeE7" : -800931448,
+    "accuracy" : 9,
+    "activity" : [ {
+      "timestampMs" : "1376344387457",
+      "activity" : [ {
+        "type" : "UNKNOWN",
+        "confidence" : 60
+      }, {
+        "type" : "STILL",
+        "confidence" : 32
+      }, {
+        "type" : "IN_VEHICLE",
+        "confidence" : 7
+      } ]
+    } ]
+  }, {
+    "timestampMs" : "1376344381236",
+    "latitudeE7" : 265515931,
+    "longitudeE7" : -800931460,
+    "accuracy" : 10
+  }, {
+    "timestampMs" : "1376344376523",
+    "latitudeE7" : 265515909,
+    "longitudeE7" : -800931443,
+    "accuracy" : 11
+  }, {
+    "timestampMs" : "1376344369732",
+    "latitudeE7" : 265515908,
+    "longitudeE7" : -800931446,
+    "accuracy" : 14
+  }, {
+    "timestampMs" : "1376344184115",
+    "latitudeE7" : 265515889,
+    "longitudeE7" : -800931423,
+    "accuracy" : 20
+  } ]
+}
