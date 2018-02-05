@@ -20,7 +20,12 @@ type ObjectKey string
 // ObjectValue type-alias of an interface{}. So, we *encapsulate* an
 // interface{} rather than aliasing one.
 type ObjectValue struct {
+    key string
     value interface{}
+}
+
+func (ov ObjectValue) Key() string {
+    return ov.key
 }
 
 func (ov ObjectValue) Value() interface{} {
@@ -152,7 +157,6 @@ func (p *Parser) parse(c chan<- interface{}, startingDelimiter rune) (err error)
     previousWasKey := false
     thisWasKey := false
     previousKey := ""
-    // var lastToken json.Token
 
     // Lets us kep track of whether we're on the key or value when processing an
     // object.
@@ -193,7 +197,10 @@ func (p *Parser) parse(c chan<- interface{}, startingDelimiter rune) (err error)
                     lastObject := p.simpleObjectStack[len_ - 1]
                     lastObject[previousKey] = value
 
-                    c <- ObjectValue{value: value}
+                    c <- ObjectValue{
+                        key: previousKey,
+                        value: value,
+                    }
                 } else {
                     c <- Value(value)
                 }
@@ -207,7 +214,10 @@ func (p *Parser) parse(c chan<- interface{}, startingDelimiter rune) (err error)
                     lastObject := p.simpleObjectStack[len_ - 1]
                     lastObject[previousKey] = value
 
-                    c <- ObjectValue{value: value}
+                    c <- ObjectValue{
+                        key: previousKey,
+                        value: value,
+                    }
                 } else {
                     c <- Value(value)
                 }
@@ -222,7 +232,10 @@ func (p *Parser) parse(c chan<- interface{}, startingDelimiter rune) (err error)
                         lastObject := p.simpleObjectStack[len_ - 1]
                         lastObject[previousKey] = value
 
-                        c <- ObjectValue{value: value}
+                        c <- ObjectValue{
+                            key: previousKey,
+                            value: value,
+                        }
                     } else if i % 2 == 0 {
                         // We're on an object key.
 
