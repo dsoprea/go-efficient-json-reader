@@ -101,12 +101,6 @@ func TestParseData1(t *testing.T) {
     ts, err := flattenStream(f)
     log.PanicIf(err)
 
-    // for i, token := range ts {
-    //     fmt.Printf("TOKEN: (%d) %s\n", i, token)
-    // }
-
-    // return
-
     expected := []string{
         "/OBJECTOPEN",
         ":locations",
